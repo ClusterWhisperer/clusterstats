@@ -1,0 +1,15 @@
+.coverage
+MANIFEST
+pylint.txt
+toy.py
+.cache/
+build/
+docs/_build
+clusterstats.egg-info/
+*.pyc
+*.swp
+*.egg
+.DS_Store
+
+.workon
+dist
