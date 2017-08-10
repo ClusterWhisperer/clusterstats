@@ -63,7 +63,54 @@ Command Line Usage:
                               Http Session max-retries (default=3)
     
 
-- 
+Example Usage:
+--------------
+
+Inventory File Format (servers.txt)
+
+.. code::
+
+    hostname1
+    hostname2
+    hostname3
+
+Quering server status and writing the status in console and csv file under /tmp directory.
+
+.. code:: shell
+  
+   clusterstats --inventory_file=servers.txt --output_dir=/tmp
+    
+
+Increasing the concurrency limit (default = 1 thread)
+
+.. code:: shell
+  
+   clusterstats --inventory_file=servers.txt --output_dir=/tmp --threads=8
+  
+Overriding Connection Timeout (default = 1sec) 
+
+.. code:: shell
+  
+   clusterstats --inventory_file=servers.txt --output_dir=/tmp --timeout=5
+   
+Overriding Http Retries (default = 3) 
+
+.. code:: shell
+  
+   clusterstats --inventory_file=servers.txt --output_dir=/tmp  --retries=3
+   
+Overriding Quality of Service rate, i.e. how many query failure can be tolerated
+by the downstream job reading the output file. For example, say quering 1000 servers
+if the qos is set to 99% it can tolerate 1% (10 nodes) of the queries failure (default=99%).
+
+.. code:: shell
+  
+   clusterstats --inventory_file=servers.txt --output_dir=/tmp  --qos=99.5
+   
+   
+
+
+
 
 
 
