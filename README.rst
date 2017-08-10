@@ -18,8 +18,8 @@ Deployment Dependency:
 - pip
 
 
-How to deploy the clusterstats package ?
-----------------------------------------
+Deploying:
+----------
 
 .. code:: shell
 
@@ -36,32 +36,34 @@ Command Line Usage:
 
 .. code:: shell
   
-     Usage: clusterstats -i <server_list_file> [-o output_directory] [options] [http options] [aggregation options]
+     Usage: clusterstats -i <server_list_file> [-o output_directory] 
+                      [options] [http options] [aggregation options]
 
-       Options:
-         -h, --help            show this help message and exit
-         -i INVENTORY_FILE, --inventory_file=INVENTORY_FILE
-                               File path with host names to query status
-         -o OUTPUT_DIR, --output_dir=OUTPUT_DIR
-                               Directory to store the status output (default= /tmp).
-         -q QOS, --qos=QOS     Guarantee atleast x% of the server status are
-                               collected to calculate statistics, otherwise
-                               errors.(default 99%)
-         -v, --verbose         Show error logs (default= turned off)
+      Options:
+        -h, --help            show this help message and exit
+        -i INVENTORY_FILE, --inventory_file=INVENTORY_FILE
+                              File path with host names to query status
+        -o OUTPUT_DIR, --output_dir=OUTPUT_DIR
+                              Directory to store the status output (default= /tmp).
+        -q QOS, --qos=QOS     Guarantee atleast x% of the server status are
+                              collected to calculate statistics, otherwise
+                              errors.(default 99%)
+        -v, --verbose         Show error logs (default= turned off)
 
-         Aggregation Options:
-           -s, --aggr_success_rate
-                               Aggregate Success count by application and version.
+        Aggregation Options:
+          -s, --aggr_success_rate
+                              Aggregate Success count by application and version.
 
-         HTTP Options:
-           -t TIMEOUT, --timeout=TIMEOUT
-                               Connection timeout.(default 1sec)
-           -f THREADS, --threads=THREADS
-                               Max concurrent http connections (default=1)
-           -r HTTP_RETRIES, --retries=HTTP_RETRIES
-                               Http Session max-retries (default=3)
+        HTTP Options:
+          -t TIMEOUT, --timeout=TIMEOUT
+                              Connection timeout.(default 1sec)
+          -f THREADS, --threads=THREADS
+                              Max concurrent http connections (default=1)
+          -r HTTP_RETRIES, --retries=HTTP_RETRIES
+                              Http Session max-retries (default=3)
     
 
+- 
 
 
 
